@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta http-equiv="refresh"
+        content="0; url=https://www.rapidtables.com/web/dev/html-redirect.htm">
+  <meta charset="utf-8">
+  <title>MatrioshTS</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<!-- Intreprete y gramatica -->
+<script type="text/javascript" src="./analizador/gramatica.js"></script>
+<script type="text/javascript" src="./ejecucion/Interprete.js"></script>
+
+<!-- AST FUNCTIONTS -->
+<script type="text/javascript" src="./edd/ast/ConstantesAst.js"></script>
+<script type="text/javascript" src="./edd/ast/Raiz.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/Expresion.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/primitivas/ValorBasico.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/binarias/Binaria.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/binarias/Aritmetica/Suma.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/binarias/Aritmetica/Resta.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/binarias/Aritmetica/Multiplicacion.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/binarias/Aritmetica/Division.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/binarias/Aritmetica/Modulo.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/binarias/Aritmetica/Potencia.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/unarias/Aritmetica/Decremento.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/unarias/Aritmetica/Incremento.js"></script>
+<script type="text/javascript" src="./edd/ast/expresiones/unarias/Aritmetica/MenosUnario.js"></script>
+
+<body>
+
+<script type="text/javascript">
+  function analizar(){
+    var entrada = document.getElementById("Fuente").value;
+    var interprete = new Interprete(entrada);
+    var salida = '';
+
+    interprete.parser();
+    salida = interprete.ejecutar();
+
+    document.getElementById("Destino").value = "";
+    document.getElementById("Destino").value = salida;
+  }
+</script>
+
+
+<header class="site-header contenedor ">
+  <h1>MatrioshTS</h1>
+</header>
+
+<div class="barra">
+  <a href="#nav" class="mobile-menu">
+    <i class="fas fa-ellipsis-v"></i>
+  </a>
+
+  <nav id="nav" class="navegacion-principal contenedor">
+    <a href="#" onclick="analizar()">Analizar</a>
+    <a href="#">Tabla Errores</a>
+    <a href="#">AST</a>
+
+    <a href="#" class="cerrar">
+      <i class="fas fa-times"></i>
+    </a>
+  </nav>
+</div>
+
+<div class="contenedor clearfix">
+  <main class="contenido-principal">
+    <article class="entrada">
+      <textarea rows="25" cols="90" id = "Fuente"></textarea>
+    </article>
+  </main>
+  <aside class="sidebar">
+    <section class="otras-entradas">
+      <textarea rows="25" cols="50" id = "Destino"></textarea>
+    </section>
+  </aside>
+</div>
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  <footer class="footer-sitio">
+  </footer>
+
+</body>
+
+</html>
