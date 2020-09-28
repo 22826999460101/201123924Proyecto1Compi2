@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d45cb0c7-33ee-4171-b09e-35022c01acdc" name="Default Changelist" comment="feature-gramatica-v1.0&#10;Ejecucion del arbol, con cambio en la interfaz" />
+    <list default="true" id="d45cb0c7-33ee-4171-b09e-35022c01acdc" name="Default Changelist" comment="Proyecto 1 Compi 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +22,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="86257813-7c6a-4d40-86e5-9c7da8c6091b" />
+  </component>
   <component name="ProjectId" id="1hYbtHmj0x2JptwtfYfOxU0BXxR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -35,7 +38,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -57,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600191187330</updated>
       <workItem from="1600191190910" duration="99617000" />
-      <workItem from="1601270190317" duration="66000" />
+      <workItem from="1601270190317" duration="482000" />
     </task>
     <task id="LOCAL-00001" summary="inicializando proyecto 1 de compiladores 2">
       <created>1600799107557</created>
@@ -73,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600929603615</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Proyecto 1 Compi 2">
+      <created>1601270309170</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601270309170</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,7 +96,8 @@
     <MESSAGE value="inicializando proyecto 1 de compiladores 2" />
     <MESSAGE value="feature-gramatica-v1.0&#10;gramatica que reconoce todas las entradas de prueba a excepecion de if(!!!!!false)" />
     <MESSAGE value="feature-gramatica-v1.0&#10;Ejecucion del arbol, con cambio en la interfaz" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature-gramatica-v1.0&#10;Ejecucion del arbol, con cambio en la interfaz" />
+    <MESSAGE value="Proyecto 1 Compi 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Proyecto 1 Compi 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="337" width="695" height="221" key="#Chrome_Settings" timestamp="1600711064832">
@@ -214,16 +225,16 @@
     <state width="1515" height="400" key="GridCell.Tab.3.right/0.0.1536.834/0.-1080.1842.1080@0.0.1536.834" timestamp="1600798829815" />
     <state width="1515" height="400" key="GridCell.Tab.3.right/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1600883313684" />
     <state width="1515" height="400" key="GridCell.Tab.3.right/0.30.1536.834/0.-1050.1920.1050@0.30.1536.834" timestamp="1600711784947" />
-    <state x="277" y="62" key="SettingsEditor" timestamp="1601270255530">
+    <state x="277" y="62" key="SettingsEditor" timestamp="1601270675044">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="62" key="SettingsEditor/0.0.1536.834/0.-1080.1842.1080@0.0.1536.834" timestamp="1600800111008" />
-    <state x="277" y="62" key="SettingsEditor/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1601270255530" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1601268758993">
+    <state x="277" y="62" key="SettingsEditor/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1601270675044" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1601270551481">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1842.1080@0.0.1536.834" timestamp="1600800115491" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1601268758993" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1601270551481" />
     <state x="374" y="28" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600844582368">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
