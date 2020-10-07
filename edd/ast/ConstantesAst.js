@@ -25,5 +25,6 @@ const TIPO_VALOR = {
   BOOLEANO:      0,
   NUMERO:        1,
   CADENA:        2,
-  NULO:          3
+  NULO:          3,
+  ERROR:         4
 }

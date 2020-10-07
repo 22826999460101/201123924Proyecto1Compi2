@@ -1,7 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d45cb0c7-33ee-4171-b09e-35022c01acdc" name="Default Changelist" comment="master:&#10;actualizacion del index" />
+    <list default="true" id="d45cb0c7-33ee-4171-b09e-35022c01acdc" name="Default Changelist" comment="master:&#10;actualizacion tamaño de la caja de texto de entrada">
+      <change afterPath="$PROJECT_DIR$/edd/ast/Nodo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ast/expresiones/acceso/Acceso.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ast/expresiones/acceso/AccesoArreglo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ast/expresiones/acceso/AccesoVariable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Condicional/Ternario.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/Relacional.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ast/instrucciones/variables/Asignacion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ast/instrucciones/variables/Declaracion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ts/Funcion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ts/TablaAmbito.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ts/TablaGlobal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/edd/ts/Variable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizador/gramatica.jison" beforeDir="false" afterPath="$PROJECT_DIR$/analizador/gramatica.jison" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analizador/gramatica.js" beforeDir="false" afterPath="$PROJECT_DIR$/analizador/gramatica.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/ConstantesAst.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/ConstantesAst.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/Raiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/Raiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Binaria.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Binaria.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Condicional/And.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Condicional/And.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Condicional/Or.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Condicional/Or.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/Diferente.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/Diferente.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/Igual.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/Igual.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/Mayor.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/Mayor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/MayorIgual.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/MayorIgual.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/Menor.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/Menor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/MenorIgual.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/binarias/Relacional/MenorIgual.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edd/ast/expresiones/unarias/Condicional/Negacion.js" beforeDir="false" afterPath="$PROJECT_DIR$/edd/ast/expresiones/unarias/Condicional/Negacion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ejecucion/Interprete.js" beforeDir="false" afterPath="$PROJECT_DIR$/ejecucion/Interprete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +71,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="86257813-7c6a-4d40-86e5-9c7da8c6091b" />
+    <option name="defaultAccountId" value="207dc152-4c26-4add-b98f-8e0b84ca2e3f" />
   </component>
   <component name="ProjectId" id="1hYbtHmj0x2JptwtfYfOxU0BXxR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -60,7 +108,9 @@
       <option name="presentableId" value="Default" />
       <updated>1600191187330</updated>
       <workItem from="1600191190910" duration="99617000" />
-      <workItem from="1601270190317" duration="791000" />
+      <workItem from="1601270190317" duration="10866000" />
+      <workItem from="1601807009936" duration="13166000" />
+      <workItem from="1602048198456" duration="238000" />
     </task>
     <task id="LOCAL-00001" summary="inicializando proyecto 1 de compiladores 2">
       <created>1600799107557</created>
@@ -90,11 +140,30 @@
       <option name="project" value="LOCAL" />
       <updated>1601270819501</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="master:&#10;actualizacion tamaño de la caja de texto de entrada">
+      <created>1601271077115</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601271077115</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
@@ -105,7 +174,8 @@
     <MESSAGE value="feature-gramatica-v1.0&#10;Ejecucion del arbol, con cambio en la interfaz" />
     <MESSAGE value="Proyecto 1 Compi 2" />
     <MESSAGE value="master:&#10;actualizacion del index" />
-    <option name="LAST_COMMIT_MESSAGE" value="master:&#10;actualizacion del index" />
+    <MESSAGE value="master:&#10;actualizacion tamaño de la caja de texto de entrada" />
+    <option name="LAST_COMMIT_MESSAGE" value="master:&#10;actualizacion tamaño de la caja de texto de entrada" />
   </component>
   <component name="WindowStateProjectService">
     <state x="560" y="337" width="695" height="221" key="#Chrome_Settings" timestamp="1600711064832">
@@ -233,16 +303,16 @@
     <state width="1515" height="400" key="GridCell.Tab.3.right/0.0.1536.834/0.-1080.1842.1080@0.0.1536.834" timestamp="1600798829815" />
     <state width="1515" height="400" key="GridCell.Tab.3.right/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1600883313684" />
     <state width="1515" height="400" key="GridCell.Tab.3.right/0.30.1536.834/0.-1050.1920.1050@0.30.1536.834" timestamp="1600711784947" />
-    <state x="277" y="62" key="SettingsEditor" timestamp="1601270675044">
+    <state x="277" y="62" key="SettingsEditor" timestamp="1602048441167">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="62" key="SettingsEditor/0.0.1536.834/0.-1080.1842.1080@0.0.1536.834" timestamp="1600800111008" />
-    <state x="277" y="62" key="SettingsEditor/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1601270675044" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1601270821087">
+    <state x="277" y="62" key="SettingsEditor/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1602048441167" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1602046111565">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1842.1080@0.0.1536.834" timestamp="1600800115491" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1601270821087" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1602046111565" />
     <state x="374" y="28" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600844582368">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -259,6 +329,10 @@
       <screen x="0" y="30" width="1536" height="834" />
     </state>
     <state x="425" y="204" key="run.anything.popup/0.30.1536.834/0.-1050.1920.1050@0.30.1536.834" timestamp="1600194132105" />
+    <state x="561" y="276" key="scopes" timestamp="1601448208667">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="561" y="276" key="scopes/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1601448208667" />
     <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1601266590578">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -269,27 +343,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/analizador/gramatica.js</url>
-          <line>166</line>
+          <line>216</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/analizador/gramatica.js</url>
-          <line>170</line>
+          <line>220</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/analizador/gramatica.js</url>
-          <line>171</line>
+          <line>221</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/analizador/gramatica.js</url>
-          <line>180</line>
+          <line>230</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/analizador/gramatica.js</url>
-          <line>188</line>
+          <line>238</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

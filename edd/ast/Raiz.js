@@ -4,17 +4,32 @@ function obtenerHash(){
   return hashCode++;
 }
 
-Raiz.prototype.listaExpresiones;
+Raiz.prototype.listaInstrucciones;
 
 function Raiz(listaExpresiones){
-  this.listaExpresiones = listaExpresiones;
+  this.listaInstrucciones = listaExpresiones;
+}
+
+Raiz.prototype.llenarTablaGlobal = function(){
+
+  for(let instruccion of this.listaInstrucciones){
+    if(instruccion.tipoInstruccion == TIPO_INSTRUCCION.DECLARACION){
+      instruccion.insertarEnTSGlobal();
+    }
+  }
+
 }
 
 Raiz.prototype.ejecutarExpresiones = function(){
   let impresionConsola = '';
 
-  for(let expresion of this.listaExpresiones){
-    impresionConsola += '> ' + expresion.ejecutarExpresion(null) +'\n';
+  for(let instruccion of this.listaInstrucciones){
+    if(instruccion.tipoInstruccion == TIPO_INSTRUCCION.IMPRIMIR){
+      impresionConsola += '> ' + instruccion.ejecutarInstruccion(null) +'\n';
+    }else{
+      /*parametro es la tabla de ambito*/
+      instruccion.ejecutarInstruccion(null);
+    }
   }
 
   return impresionConsola;

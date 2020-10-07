@@ -1,8 +1,13 @@
+/*variables globales del compilador*/
+var tablaGlobal;
+
+
 Interprete.prototype.entrada;
 Interprete.prototype.ast;
 
 function Interprete(entrada){
   this.entrada = entrada;
+  tablaGlobal = new TablaGlobal();
 }
 
 Interprete.prototype.parser = function (){
@@ -10,5 +15,7 @@ Interprete.prototype.parser = function (){
 }
 
 Interprete.prototype.ejecutar = function (){
-  return this.ast.ejecutarExpresiones();
+  this.ast.llenarTablaGlobal();
+
+  return this.ast.ejecutarExpresiones(null);
 }

@@ -263,23 +263,44 @@ CONDICION_FOR_IN : 'let' ID 'in' CONDICION
 
 /* DECLARACIONES  ------- ASIGNACIONES ----------- LLAMADAS ------------- EXPRESIONES ---------- CONDICIONES  */
 
-DECLARACION : 'let' ID '=' CONDICION  LISTA_DECLARACION ';'
+DECLARACION : 'let' ID ':' TIPO '=' CONDICION LISTA_DECLARACION ';' { $$ = new Declaracion($2);
+                                                                      $$.setTipo($4);
+                                                                      $$.setExpresion($6);
+                                                                      $$.setListaExpresiones($7);
+                                                                      $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                                                                    }
+            | 'let' ID '=' CONDICION  LISTA_DECLARACION ';' { $$ = new Declaracion($2);
+                                                              $$.setExpresion($4);
+                                                              $$.setListaExpresiones($5);
+                                                              $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                                                            }
             | 'let' ID ':' TIPO '=' ASIGNACION_ARREGLO ';'
             | 'let' ID ':' TIPO '=' ASIGNACION_TYPES ';'
-            | 'let' ID ':' TIPO '=' CONDICION ';'
+            | 'const' ID ':' TIPO '=' CONDICION LISTA_DECLARACION ';'
             | 'const' ID '=' CONDICION LISTA_DECLARACION ';'
             | 'const' ID ':' TIPO '=' ASIGNACION_ARREGLO ';'
             | 'const' ID ':' TIPO '=' ASIGNACION_TYPES ';'
-            | 'const' ID ':' TIPO '=' CONDICION ';'
-            | 'let' ID ':' TIPO ';'
-            | 'let' ID  ';'
+            | 'let' ID ':' TIPO ';' { $$ = new Declaracion($2);
+                                      $$.setTipo($4);
+                                      $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                                    }
+            | 'let' ID  ';' { $$ = new Declaracion($2);
+                              $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                            }
             ;
 
-LISTA_DECLARACION : ',' ID '=' CONDICION LISTA_DECLARACION
-                  | /*VACIO*/
+LISTA_DECLARACION : ',' ID '=' CONDICION LISTA_DECLARACION {  let nuevaDeclaracion = new Declaracion($2);
+                                                              nuevaDeclaracion.setExpresion($4);
+                                                              $$ = [nuevaDeclaracion];
+                                                              if($5){ $$.push(...$5); }
+                                                           }
+                  | /*VACIO*/ { $$ = null; }
                   ;
 
-ASIGNACION : ACCESO '=' CONDICION ';'
+ASIGNACION : ACCESO '=' CONDICION ';' { $$ = new Asignacion($1);
+                                        $$.setExpresion($3);
+                                        $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                                      }
            | ACCESO '=' ASIGNACION_TYPES ';'
            | ACCESO '=' ASIGNACION_ARREGLO ';'
            | ACCESO '++' ';'
@@ -351,44 +372,63 @@ DIMENSION_ARREGLO : '[' ']' DIMENSION_ARREGLO
                   | /*VACIO*/
                   ;
 
-CONDICION : CONDICION_BETA CONDICION_PRIMA
-          | CONDICION '?' EXPRESION ':' EXPRESION
-          ;
-
-CONDICION_BETA : '!' D
-               | D
-               ;
-
-CONDICION_PRIMA : '||' CONDICION_BETA CONDICION_PRIMA
-                | '&&' CONDICION_BETA CONDICION_PRIMA
-                | /*VACIO*/
-                ;
-
-D : RELACIONAL
-  ;
-
-
-RELACIONAL : EXPRESION F
-           ;
-
-F : '>=' EXPRESION
-  | '<=' EXPRESION
-  | '==' EXPRESION
-  | '!=' EXPRESION
-  | '>' EXPRESION
-  | '<' EXPRESION
-  | /*VACIO*/
-  ;
-
-INICIO : EXPRESION LISTA_EXPRESION EOF { console.log('LECTURA EXITOSA');
+INICIO : CONDICION LISTA_EXPRESION EOF { console.log('LECTURA EXITOSA');
                                          let listaExpresiones = [$1]; if($2){ listaExpresiones.push(...$2); }
                                          return new Raiz(listaExpresiones);
                                        }
        ;
 
-LISTA_EXPRESION : ',' EXPRESION LISTA_EXPRESION {  $$ = [$2]; if($3){ $$.push(...$3); }  }
-                | { $$ = null; }
+LISTA_EXPRESION : ',' CONDICION LISTA_EXPRESION {  $$ = [$2]; if($3){ $$.push(...$3); }  }
+                | /*VACIO*/{ $$ = null; }
                 ;
+
+CONDICION : CONDICION_BETA CONDICION_PRIMA { $$ = new Expresion($1,$2); }
+          | CONDICION '?' EXPRESION ':' EXPRESION { $$ = new Ternario($1,$3,$5);
+                                                    $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                                                  }
+          ;
+
+CONDICION_BETA : '!' D { $$ = new Negacion($2);
+                         $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                       }
+               | D { $$ = $1; }
+               ;
+
+CONDICION_PRIMA : '||' CONDICION_BETA CONDICION_PRIMA { $$ = new Or($2 ,$3);
+                                                        $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                                                      }
+                | '&&' CONDICION_BETA CONDICION_PRIMA { $$ = new And($2 ,$3);
+                                                        $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                                                      }
+                | /*VACIO*/ { $$ = null; }
+                ;
+
+D : RELACIONAL { $$ = $1; }
+  ;
+
+RELACIONAL : EXPRESION F { $$ = new Expresion($1,$2); }
+           ;
+
+F : '>=' EXPRESION { $$ = new MayorIgual($2);
+                     $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                   }
+  | '<=' EXPRESION { $$ = new MenorIgual($2);
+                     $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                   }
+  | '==' EXPRESION { $$ = new Igual($2);
+                     $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                   }
+  | '!=' EXPRESION { $$ = new Diferente($2);
+                     $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                   }
+  | '>' EXPRESION  { $$ = new Mayor($2);
+                     $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                   }
+  | '<' EXPRESION  { $$ = new Menor($2);
+                     $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                   }
+  | /*VACIO*/ { $$ = null; }
+  ;
 
 EXPRESION : H EXPRESION_PRIMA { $$ = new Expresion($1,$2); }
           ;
@@ -399,7 +439,7 @@ EXPRESION_PRIMA : '+'  H EXPRESION_PRIMA  { $$ = new Suma($2,$3);
                 | '-'  H EXPRESION_PRIMA  { $$ = new Resta($2,$3);
                                             $$.setLineaColumna( this._$.first_line , this._$.first_column);
                                           }
-                | { $$ = null; }
+                | /*VACIO*/ { $$ = null; }
                 ;
 
 H : G MULTIPLICACION_PRIMA { $$ = new Expresion($1,$2); }
@@ -454,25 +494,31 @@ T : 'NUMBER' { $$ = new ValorBasico(TIPO_VALOR.NUMERO, Number($1));
   | 'null'   { $$ = new ValorBasico(TIPO_VALOR.NULO, null);
                $$.setLineaColumna( this._$.first_line , this._$.first_column);
              }
-  | ACCESO
+  | ACCESO   { $$ = $1; }
   | LLAMADA
   | '(' CONDICION ')'
   ;
 
-ACCESO : ACCESO_PRIMITIVO ACCESO_PRIMA
+ACCESO : ACCESO_PRIMITIVO ACCESO_PRIMA { $$ = new Acceso($1,$2); }
        ;
 
-ACCESO_PRIMITIVO : ID
-                 | ID '[' CONDICION ']' PROFUNDIDAD
+ACCESO_PRIMITIVO : ID  {  $$ = new AccesoVariable($1);
+                          $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                       }
+                 | ID '[' CONDICION ']' PROFUNDIDAD  {  let profundidad = [$3];
+                                                        if($5){ profundidad.push(...$5); }
+                                                        $$ = new AccesoArreglo($1,profundidad);
+                                                        $$.setLineaColumna( this._$.first_line , this._$.first_column);
+                                                     }
                  ;
 
-PROFUNDIDAD : '[' CONDICION ']' PROFUNDIDAD
-            | /*VACIO*/
+PROFUNDIDAD : '[' CONDICION ']' PROFUNDIDAD {  $$ = [$2]; if($4){ $$.push(...$4); }  }
+            | /*VACIO*/ { $$ = null; }
             ;
 
-ACCESO_PRIMA :  '.' ACCESO_PRIMITIVO ACCESO_PRIMA
+ACCESO_PRIMA :  '.' ACCESO_PRIMITIVO ACCESO_PRIMA {  $$ = [$2]; if($3){ $$.push(...$3); }  }
              |  '.' 'length'
              |  '.' 'push' '(' CONDICION ')'
              |  '.' 'pop' '(' ')'
-             | /*VACIO*/
+             | /*VACIO*/ { $$ = null; }
              ;
