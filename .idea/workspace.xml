@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d45cb0c7-33ee-4171-b09e-35022c01acdc" name="Default Changelist" comment="master:" />
+    <list default="true" id="d45cb0c7-33ee-4171-b09e-35022c01acdc" name="Default Changelist" comment="master:">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +82,7 @@
       <workItem from="1600191190910" duration="99617000" />
       <workItem from="1601270190317" duration="10866000" />
       <workItem from="1601807009936" duration="13166000" />
-      <workItem from="1602048198456" duration="543000" />
+      <workItem from="1602048198456" duration="1049000" />
     </task>
     <task id="LOCAL-00001" summary="inicializando proyecto 1 de compiladores 2">
       <created>1600799107557</created>
@@ -131,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602048731701</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="master:">
+      <created>1602048865873</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1602048865873</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,11 +303,11 @@
     </state>
     <state x="277" y="62" key="SettingsEditor/0.0.1536.834/0.-1080.1842.1080@0.0.1536.834" timestamp="1600800111008" />
     <state x="277" y="62" key="SettingsEditor/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1602048490894" />
-    <state x="127" y="142" width="1128" height="533" key="Vcs.Push.Dialog.v2" timestamp="1602048735463">
+    <state x="127" y="142" width="1128" height="533" key="Vcs.Push.Dialog.v2" timestamp="1602048909482">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1842.1080@0.0.1536.834" timestamp="1600800115491" />
-    <state x="127" y="142" width="1128" height="533" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1602048735463" />
+    <state x="127" y="142" width="1128" height="533" key="Vcs.Push.Dialog.v2/0.0.1536.834/0.-1080.1858.1080@0.0.1536.834" timestamp="1602048909482" />
     <state x="374" y="28" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600844582368">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
